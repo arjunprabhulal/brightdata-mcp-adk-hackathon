@@ -2,6 +2,12 @@
 
 Professional Web Scraping & Data Extraction Platform powered by BrightData's Model Context Protocol (MCP) and Google's Agent Development Kit (ADK).
 
+## 🌟 Live Demo
+
+**🚀 Try it now**: https://brightdata-mcp.aicloudlab.dev/
+
+**📝 Featured Article**: [BrightData MCP × Google ADK Platform](https://dev.to/arjun_prabhulal/brightdata-mcp-google-adk-professional-web-scraping-platform-2f5d) on DEV Community
+
 **Repository**: https://github.com/arjunprabhulal/brightdata-mcp-adk-hackathon
 
 ## 🚀 Features
@@ -17,6 +23,95 @@ Professional Web Scraping & Data Extraction Platform powered by BrightData's Mod
 ```
 Frontend (React) ← → Backend (FastAPI) ← → Google ADK Agent ← → MCP Tools ← → BrightData Network
 ```
+
+## 🛠️ Tech Stack
+
+### **🤖 AI & Machine Learning**
+- **Google Gemini 2.0 Flash** - Primary LLM for intelligent query processing
+- **Google Agent Development Kit (ADK)** - Agent framework and infrastructure
+- **Model Context Protocol (MCP)** - Standardized protocol for AI-tool integration
+- **BrightData MCP Server** - 50+ specialized web scraping tools
+
+### **🔧 Backend Technologies**
+- **Python 3.11+** - Primary backend language
+- **FastAPI** - High-performance web framework
+- **Uvicorn** - ASGI server for FastAPI
+- **Pydantic** - Data validation and settings management
+- **Asyncio** - Asynchronous programming support
+
+### **🌐 Frontend Technologies**
+- **React** - Frontend JavaScript library
+- **HTML5/CSS3** - Web standards
+- **JavaScript/TypeScript** - Frontend scripting
+- **Responsive Design** - Mobile-first approach
+
+### **🐳 Infrastructure & Deployment**
+- **Docker** - Containerization platform
+- **Docker Compose** - Multi-container orchestration
+- **Nginx** - Reverse proxy and load balancer
+- **Let's Encrypt** - SSL certificate management
+- **Google Cloud Platform (GCP)** - Cloud infrastructure
+- **Compute Engine** - Virtual machine hosting
+
+### **🔒 Security & Networking**
+- **SSL/TLS** - HTTPS encryption
+- **HSTS** - HTTP Strict Transport Security
+- **CSP** - Content Security Policy headers
+- **CORS** - Cross-Origin Resource Sharing
+- **Rate Limiting** - API protection
+- **Environment Variables** - Secure credential storage
+
+### **🌍 Web Scraping & Data**
+- **BrightData Proxy Network** - Enterprise proxy infrastructure
+- **SerpAPI** - Search engine results API
+- **REST APIs** - Various data source integrations
+- **JSON** - Data interchange format
+
+### **🔧 Development Tools**
+- **Git** - Version control
+- **GitHub** - Repository hosting
+- **VS Code/Cursor** - Development environment
+- **npm/pip** - Package management
+
+### **📊 Monitoring & Health**
+- **Health Check Endpoints** - Service monitoring
+- **Docker Health Checks** - Container monitoring
+- **Structured Logging** - Application logging
+- **Error Handling** - Graceful degradation
+
+### **🔌 Integration Protocols**
+- **HTTP/HTTPS** - Web protocols
+- **WebSocket** - Real-time communication
+- **stdio** - MCP server communication
+- **JSON-RPC** - Remote procedure calls
+
+### **📦 Key Dependencies**
+
+**Backend (Python):**
+```python
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+google-adk>=0.1.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+google-generativeai>=0.8.0
+```
+
+**Frontend (Node.js):**
+```json
+{
+  "react": "^18.0.0",
+  "typescript": "^5.0.0",
+  "vite": "^5.0.0"
+}
+```
+
+### **🏗️ Architecture Patterns**
+- **Microservices** - Containerized services
+- **Client-Server** - Frontend-backend separation
+- **MCP Protocol** - Standardized AI-tool communication
+- **Proxy Pattern** - Nginx reverse proxy
+- **Event-Driven** - Asynchronous processing
 
 ## 📁 Project Structure
 
@@ -75,9 +170,16 @@ docker compose up -d
 ```
 
 4. **Access the platform:**
+
+**Local Development:**
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:8001
 - API Docs: http://localhost:8001/docs
+
+**Live Platform:**
+- Frontend: https://brightdata-mcp.aicloudlab.dev/
+- Backend API: https://brightdata-mcp.aicloudlab.dev/api/
+- API Docs: https://brightdata-mcp.aicloudlab.dev/docs
 
 ### Environment Configuration
 
@@ -202,6 +304,14 @@ docker compose up -d
 ```
 
 ### Production
+
+**Live Production Instance:**
+- **URL**: https://brightdata-mcp.aicloudlab.dev/
+- **Infrastructure**: GCP Compute Engine with Docker
+- **SSL**: Let's Encrypt certificates with auto-renewal
+- **Security**: HTTPS, HSTS, CSP headers, rate limiting
+
+**Local Production Build:**
 ```bash
 # Build and deploy
 docker compose -f docker-compose.yml up -d
@@ -212,7 +322,7 @@ docker compose up -d --scale backend=2
 
 ### Cloud Deployment
 - **AWS**: ECS, EKS, or EC2 with Docker
-- **GCP**: Cloud Run, GKE, or Compute Engine
+- **GCP**: Cloud Run, GKE, or Compute Engine ✅ (Currently deployed)
 - **Azure**: Container Instances or AKS
 
 ## 🤝 Contributing
