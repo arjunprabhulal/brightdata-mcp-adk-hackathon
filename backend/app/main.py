@@ -12,10 +12,16 @@ from google.genai import types
 from google.adk.agents import Agent
 from google.adk.runners import Runner
 from google.adk.sessions import InMemorySessionService
-from ..utils.mcp_manager import get_mcp_manager
+
+# Add parent directory to path for imports
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from utils.mcp_manager import get_mcp_manager
 
 # Load environment variables
-load_dotenv('../config/.env')
+load_dotenv('config/.env')
 
 # Simplified globals - MCP manager handles most state
 _agent_instance = None
