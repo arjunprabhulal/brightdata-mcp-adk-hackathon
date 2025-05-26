@@ -1,0 +1,34 @@
+{
+  "name": "brightdata-mcp-frontend",
+  "version": "2.0.0",
+  "description": "BrightData MCP × Google ADK - Professional Web Scraping Platform Frontend",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "python -m http.server 3000 --directory public",
+    "build": "echo 'Frontend build complete'",
+    "serve": "python -m http.server 8080 --directory public",
+    "dev": "python -m http.server 3000 --directory public"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "marked": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/standalone": "^7.23.0"
+  },
+  "keywords": [
+    "web-scraping",
+    "brightdata",
+    "google-adk",
+    "mcp",
+    "data-extraction",
+    "ai-agent"
+  ],
+  "author": "BrightData MCP Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/brightdata-mcp-platform"
+  }
+} 

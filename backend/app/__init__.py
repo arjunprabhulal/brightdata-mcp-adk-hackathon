@@ -1,0 +1,1 @@
+# BrightData MCP × Google ADK Backend Application 

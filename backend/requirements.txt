@@ -1,0 +1,14 @@
+# Core Framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.6.0
+
+# Google ADK and AI
+google-adk>=0.0.1
+
+# Configuration
+python-dotenv>=1.0.0
+
+# Optional: FastAPI extras (uncomment if needed)
+# python-multipart>=0.0.6  # For form uploads
+# httpx>=0.26.0            # For HTTP client functionality 
