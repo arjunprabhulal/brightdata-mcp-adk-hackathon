@@ -1,6 +1,6 @@
 {
   "name": "brightdata-mcp-frontend",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "BrightData MCP × Google ADK - Professional Web Scraping Platform Frontend",
   "main": "public/index.html",
   "scripts": {
@@ -22,13 +22,27 @@
     "brightdata",
     "google-adk",
     "mcp",
+    "model-context-protocol",
     "data-extraction",
-    "ai-agent"
+    "ai-agent",
+    "gemini",
+    "google-ai",
+    "proxy-network",
+    "e-commerce-scraping",
+    "social-media-data",
+    "real-time-data",
+    "hackathon",
+    "fastapi",
+    "react"
   ],
-  "author": "BrightData MCP Team",
+  "author": "Arjun Prabhulal <arjun@aicloudlab.dev>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/brightdata-mcp-platform"
+    "url": "https://github.com/arjunprabhulal/brightdata-mcp-adk-hackathon"
+  },
+  "homepage": "https://brightdata-mcp.aicloudlab.dev",
+  "bugs": {
+    "url": "https://github.com/arjunprabhulal/brightdata-mcp-adk-hackathon/issues"
   }
 } 
