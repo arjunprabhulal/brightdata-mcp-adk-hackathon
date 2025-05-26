@@ -5,11 +5,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8001:8001"
+    env_file:
+      - ./backend/config/.env
     environment:
-      - GEMINI_API_KEY=${GEMINI_API_KEY}
-      - BRIGHTDATA_API_TOKEN=${BRIGHTDATA_API_TOKEN}
-      - BROWSER_AUTH=${BROWSER_AUTH}
-      - API_TOKEN=${API_TOKEN}
       - HOST=0.0.0.0
       - PORT=8001
       - DEBUG=false
