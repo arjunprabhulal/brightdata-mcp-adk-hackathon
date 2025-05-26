@@ -298,11 +298,55 @@ async def lifespan(app: FastAPI):
 
 
 
-# Create FastAPI app with lifespan
+# Create FastAPI app with proper OpenAPI configuration
 app = FastAPI(
-    title="Google ADK FastAPI MCP Agent",
-    description="A FastAPI application using Google ADK with BrightData MCP tools integration",
-    version="2.0.0",
+    title="BrightData MCP × Google ADK Platform",
+    description="""
+    Professional Web Scraping & Data Extraction Platform powered by BrightData's Model Context Protocol (MCP) and Google's Agent Development Kit (ADK).
+    
+    ## Features
+    
+    * **50+ Specialized Tools** - E-commerce, social media, news, business data
+    * **AI-Powered Agent** - Google Gemini 2.0 Flash with intelligent tool selection
+    * **Real-time Scraping** - BrightData proxy network with anti-bot protection
+    * **Professional UI** - React-based interface with responsive design
+    * **Production Ready** - Docker deployment with health checks and monitoring
+    
+    ## Live Platform
+    
+    * **Frontend**: [https://brightdata-mcp.aicloudlab.dev/](https://brightdata-mcp.aicloudlab.dev/)
+    * **Repository**: [GitHub](https://github.com/arjunprabhulal/brightdata-mcp-adk-hackathon)
+    
+    ## Query Types
+    
+    1. **🔍 Web Search** - Multi-engine search results
+    2. **🌐 Website Scraping** - Extract data from specific URLs  
+    3. **🛒 E-commerce Data** - Product info, prices, reviews
+    4. **📱 Social Media** - Trending content and metrics
+    5. **📰 News & Articles** - Latest news from multiple sources
+    6. **📊 Data Comparison** - Compare across platforms
+    """,
+    version="1.0.0",
+    openapi_version="3.1.0",
+    contact={
+        "name": "Arjun Prabhulal",
+        "url": "https://github.com/arjunprabhulal",
+        "email": "arjun@aicloudlab.dev"
+    },
+    license_info={
+        "name": "MIT License",
+        "url": "https://opensource.org/licenses/MIT"
+    },
+    servers=[
+        {
+            "url": "https://brightdata-mcp.aicloudlab.dev",
+            "description": "Production server"
+        },
+        {
+            "url": "http://localhost:8001",
+            "description": "Development server"
+        }
+    ],
     lifespan=lifespan
 )
 
@@ -336,15 +380,33 @@ async def root():
     
     return {
         "status": "online",
-        "message": "Google ADK FastAPI MCP Agent",
-        "version": "2.0.0",
-        "framework": "Google ADK",
+        "name": "BrightData MCP × Google ADK Platform",
+        "description": "Professional Web Scraping & Data Extraction Platform",
+        "version": "1.0.0",
+        "framework": "Google ADK + BrightData MCP",
+        "ai_model": "Google Gemini 2.0 Flash",
         "mcp_tools_available": tools_count,
+        "features": [
+            "50+ Specialized Tools",
+            "AI-Powered Agent",
+            "Real-time Scraping",
+            "Professional UI",
+            "Production Ready"
+        ],
         "endpoints": {
             "chat": "/chat",
+            "quick_compare": "/quick-compare",
             "health": "/health",
-            "test": "/test"
-        }
+            "mcp_status": "/mcp/status",
+            "docs": "/docs"
+        },
+        "live_platform": {
+            "frontend": "https://brightdata-mcp.aicloudlab.dev/",
+            "api": "https://brightdata-mcp.aicloudlab.dev/api/",
+            "docs": "https://brightdata-mcp.aicloudlab.dev/docs",
+            "health": "https://brightdata-mcp.aicloudlab.dev/health"
+        },
+        "repository": "https://github.com/arjunprabhulal/brightdata-mcp-adk-hackathon"
     }
 
 @app.get("/health")

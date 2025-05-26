@@ -177,9 +177,10 @@ docker compose up -d
 - API Docs: http://localhost:8001/docs
 
 **Live Platform:**
-- Frontend: https://brightdata-mcp.aicloudlab.dev/
-- Backend API: https://brightdata-mcp.aicloudlab.dev/api/
-- API Docs: https://brightdata-mcp.aicloudlab.dev/docs
+- 🔒 Frontend: https://brightdata-mcp.aicloudlab.dev/
+- 🔒 API: https://brightdata-mcp.aicloudlab.dev/api/
+- 🔒 Docs: https://brightdata-mcp.aicloudlab.dev/docs
+- 🔒 Health: https://brightdata-mcp.aicloudlab.dev/health
 
 ### Environment Configuration
 
